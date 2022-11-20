@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t2J-7o-gsh">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="xTp-jr-zjW">
+            <objects>
+                <viewController id="t2J-7o-gsh" customClass="ViewController" customModule="PageAndScrollAndSegmentedControlDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q4W-2Y-dAm">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uGC-Ze-WkP">
+                                <rect key="frame" x="0.0" y="100" width="390" height="444"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Crc-H2-xd9">
+                                        <rect key="frame" x="0.0" y="0.0" width="1950" height="444"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="小王子-1-新" translatesAutoresizingMaskIntoConstraints="NO" id="5Y1-oN-kSX">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="444"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="小王子-2-新" translatesAutoresizingMaskIntoConstraints="NO" id="m8f-pT-Gmc">
+                                                <rect key="frame" x="390" y="0.0" width="390" height="444"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="小王子-3-新" translatesAutoresizingMaskIntoConstraints="NO" id="o7R-VZ-s9A">
+                                                <rect key="frame" x="780" y="0.0" width="390" height="444"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="小王子-4-新" translatesAutoresizingMaskIntoConstraints="NO" id="i49-pS-Gnk">
+                                                <rect key="frame" x="1170" y="0.0" width="390" height="444"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="小王子-5-新" translatesAutoresizingMaskIntoConstraints="NO" id="FwR-qs-e7M">
+                                                <rect key="frame" x="1560" y="0.0" width="390" height="444"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Crc-H2-xd9" firstAttribute="leading" secondItem="LDm-ze-6rX" secondAttribute="leading" id="C7X-nu-N89"/>
+                                    <constraint firstItem="5Y1-oN-kSX" firstAttribute="height" secondItem="Pof-Uc-PY5" secondAttribute="height" id="c8T-jA-if3"/>
+                                    <constraint firstItem="Crc-H2-xd9" firstAttribute="top" secondItem="LDm-ze-6rX" secondAttribute="top" id="ijl-5E-0KA"/>
+                                    <constraint firstItem="Crc-H2-xd9" firstAttribute="trailing" secondItem="LDm-ze-6rX" secondAttribute="trailing" id="mTe-81-zfx"/>
+                                    <constraint firstItem="Crc-H2-xd9" firstAttribute="bottom" secondItem="LDm-ze-6rX" secondAttribute="bottom" id="saz-v6-eN9"/>
+                                    <constraint firstItem="5Y1-oN-kSX" firstAttribute="width" secondItem="Pof-Uc-PY5" secondAttribute="width" id="tKq-Wd-9gr"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="LDm-ze-6rX"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Pof-Uc-PY5"/>
+                                <connections>
+                                    <outlet property="delegate" destination="t2J-7o-gsh" id="nqE-lA-oXa"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="dcJ-uc-Xqo">
+                                <rect key="frame" x="119.33333333333333" y="714" width="151.66666666666669" height="26"/>
+                                <color key="pageIndicatorTintColor" systemColor="systemPinkColor"/>
+                                <color key="currentPageIndicatorTintColor" systemColor="systemYellowColor"/>
+                                <connections>
+                                    <action selector="pageContrlAction:" destination="t2J-7o-gsh" eventType="valueChanged" id="R0j-Ca-yB1"/>
+                                </connections>
+                            </pageControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0Fc-Uc-gUm">
+                                <rect key="frame" x="28" y="629" width="330" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                    <segment title="Forth"/>
+                                    <segment title="Fifth"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedAction:" destination="t2J-7o-gsh" eventType="valueChanged" id="Y1c-p7-6gS"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="left" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJu-Nn-V9l">
+                                <rect key="frame" x="105.00000000000001" y="555.66666666666663" width="46.666666666666671" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowtriangle.backward.fill" catalog="system">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="leftButtonAction:" destination="t2J-7o-gsh" eventType="touchUpInside" id="90k-tz-vR5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="right" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jmj-xl-7Rz">
+                                <rect key="frame" x="238.33333333333334" y="555.66666666666663" width="46.666666666666657" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowtriangle.right.fill" catalog="system">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="rightButtonAction:" destination="t2J-7o-gsh" eventType="touchUpInside" id="cdf-i4-5oG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aKN-Ym-WLM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aKN-Ym-WLM" firstAttribute="bottom" secondItem="ZJu-Nn-V9l" secondAttribute="bottom" constant="220" id="3YH-Xw-Yk9"/>
+                            <constraint firstItem="dcJ-uc-Xqo" firstAttribute="centerX" secondItem="Q4W-2Y-dAm" secondAttribute="centerX" id="9XE-TQ-3Gs"/>
+                            <constraint firstItem="aKN-Ym-WLM" firstAttribute="trailing" secondItem="0Fc-Uc-gUm" secondAttribute="trailing" constant="32" id="Fxj-Go-4V2"/>
+                            <constraint firstItem="uGC-Ze-WkP" firstAttribute="top" secondItem="Q4W-2Y-dAm" secondAttribute="top" constant="100" id="HhU-gZ-dVB"/>
+                            <constraint firstItem="aKN-Ym-WLM" firstAttribute="bottom" secondItem="dcJ-uc-Xqo" secondAttribute="bottom" constant="70" id="Xcn-rY-8d3"/>
+                            <constraint firstItem="aKN-Ym-WLM" firstAttribute="bottom" secondItem="Jmj-xl-7Rz" secondAttribute="bottom" constant="220" id="YhV-Hr-9kB"/>
+                            <constraint firstItem="ZJu-Nn-V9l" firstAttribute="leading" secondItem="aKN-Ym-WLM" secondAttribute="leading" constant="105" id="ZBL-HO-me4"/>
+                            <constraint firstItem="uGC-Ze-WkP" firstAttribute="leading" secondItem="Q4W-2Y-dAm" secondAttribute="leading" id="a9L-ec-EF8"/>
+                            <constraint firstItem="aKN-Ym-WLM" firstAttribute="trailing" secondItem="Jmj-xl-7Rz" secondAttribute="trailing" constant="105" id="e8n-Wp-YoU"/>
+                            <constraint firstAttribute="trailing" secondItem="uGC-Ze-WkP" secondAttribute="trailing" id="hSU-IF-rVT"/>
+                            <constraint firstItem="aKN-Ym-WLM" firstAttribute="bottom" secondItem="0Fc-Uc-gUm" secondAttribute="bottom" constant="150" id="has-CM-wlf"/>
+                            <constraint firstAttribute="bottom" secondItem="uGC-Ze-WkP" secondAttribute="bottom" constant="300" id="mtX-ym-b66"/>
+                            <constraint firstItem="0Fc-Uc-gUm" firstAttribute="leading" secondItem="aKN-Ym-WLM" secondAttribute="leading" constant="28" id="qcd-3Y-Gn9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="leftButton" destination="ZJu-Nn-V9l" id="02m-df-UzH"/>
+                        <outlet property="pageControl" destination="dcJ-uc-Xqo" id="hgC-Ce-jhG"/>
+                        <outlet property="rightButton" destination="Jmj-xl-7Rz" id="Ptp-Aa-yzT"/>
+                        <outlet property="scrollView" destination="uGC-Ze-WkP" id="A2n-ZJ-cnM"/>
+                        <outlet property="segmentedControl" destination="0Fc-Uc-gUm" id="guX-h9-4h1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k4u-T8-oqS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="777" y="-117"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowtriangle.backward.fill" catalog="system" width="128" height="113"/>
+        <image name="arrowtriangle.right.fill" catalog="system" width="128" height="113"/>
+        <image name="小王子-1-新" width="390" height="444"/>
+        <image name="小王子-2-新" width="390" height="444"/>
+        <image name="小王子-3-新" width="390" height="444"/>
+        <image name="小王子-4-新" width="390" height="444"/>
+        <image name="小王子-5-新" width="390" height="444"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
